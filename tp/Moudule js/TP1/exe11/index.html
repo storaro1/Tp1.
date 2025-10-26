@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fond Aléatoire</title>
+  <style>
+    body {
+      transition: background-color 0.5s ease;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Couleur de fond aléatoire</h1>
+  <p>La couleur de fond change à chaque chargement de page.</p>
+
+  <script>
+    function genererCouleurAleatoire() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    document.body.style.backgroundColor = genererCouleurAleatoire();
+  </script>
+</body>
+</html>

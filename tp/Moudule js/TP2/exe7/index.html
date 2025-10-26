@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interdiction redirection + menu déroulant</title>
+  <style>
+    #menu {
+      display: none;
+      margin-top: 5px;
+      padding: 10px;
+      border: 1px solid #333;
+      background-color: #eee;
+      width: 150px;
+    }
+    #menu div {
+      padding: 5px;
+      cursor: pointer;
+    }
+    #menu div:hover {
+      background-color: #ccc;
+    }
+    #menu-container {
+      display: inline-block;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+
+  <hr>
+
+  <!-- 2. Div qui affiche un menu au clic -->
+  <div id="menu-container">
+    <div id="clicDiv" style="padding:10px; background-color: #ddd; width: 150px; cursor:pointer;">
+      Cliquez ici pour afficher le menu
+    </div>
+
+    <div id="menu">
+      <div>youtube.com</div>
+      <div>google.com</div>
+      <div>picsum.photos</div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Générateur de tableau aléatoire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 7px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      background-color: #1669f5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0e4ccf;
+    }
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    #erreur {
+      color: red;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Générateur de tableau aléatoire</h2>
+
+  <form id="formTableau">
+    <label for="dimension">Dimension du tableau</label>
+    <input type="text" id="dimension" name="dimension" placeholder="Ex: 15" />
+
+    <label for="valMin">La valeur minimale</label>
+    <input type="text" id="valMin" name="valMin" placeholder="Ex: 3" />
+
+    <label for="valMax">La valeur maximale</label>
+    <input type="text" id="valMax" name="valMax" placeholder="Ex: 99" />
+
+    <button type="submit">Générez un tableau</button>
+  </form>
+
+  <div id="erreur"></div>
+  <div id="table-container"></div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

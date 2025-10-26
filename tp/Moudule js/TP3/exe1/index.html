@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulaire d'inscription</title>
+  <style>
+    form {
+      max-width: 400px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    #recap {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px solid #333;
+      background-color: #f0f0f0;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h3 style="text-align: center;">Formulaire d'inscription</h3>
+
+  <form id="formInscription" novalidate>
+    <label>Nom:
+      <input type="text" id="nom" name="nom" required />
+    </label>
+
+    <label>Prénom:
+      <input type="text" id="prenom" name="prenom" required />
+    </label>
+
+    <label>E-mail:
+      <input type="email" id="email" name="email" required />
+    </label>
+
+    <label>Mot de passe:
+      <input type="password" id="mdp" name="mdp" required />
+    </label>
+
+    <label>Resaisir le mot de passe:
+      <input type="password" id="mdp2" name="mdp2" required />
+    </label>
+
+    <label>Téléphone:
+      <input type="tel" id="tel" name="tel" required />
+    </label>
+
+    <label>Langue:
+      <select id="langue" name="langue" required>
+        <option value="">--Choisir--</option>
+        <option value="Anglais">Anglais</option>
+        <option value="Français">Français</option>
+        <option value="Espagnol">Espagnol</option>
+      </select>
+    </label>
+
+    <label>Commentaire:
+      <textarea id="commentaire" name="commentaire" rows="4" required></textarea>
+    </label>
+
+    <button type="submit">Valider</button>
+    <button type="button" id="btnAnnuler">Annuler</button>
+  </form>
+
+  <div id="recap"></div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
